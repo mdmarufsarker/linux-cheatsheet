@@ -2,9 +2,11 @@
 
 A Beginners guide for Linux users
 
-[Bash Related Commands](##bash-related-commands)
+[Bash Related Commands](#bash-related-commands)
 
-[File / Directory Related Commands](##file--directory-related-commands)
+[System Related Commands](#system-related-commands)
+
+[File / Directory Related Commands](#file--directory-related-commands)
 
 ## Bash Related Commands
 
@@ -47,6 +49,176 @@ A Beginners guide for Linux users
 - Autocomplete command with options
 
   Tab three times
+
+## System Related Commands
+
+### Dabian Based Systems
+
+- Update the system
+
+  sudo apt update
+
+- Upgrade the system
+
+  sudo apt upgrade
+
+- Install a package
+
+  sudo apt install package_name
+
+- Remove a package
+
+  sudo apt remove package_name
+
+- Remove a package and its dependencies
+
+  sudo apt autoremove package_name
+
+- Search for a package
+
+  apt search package_name
+
+- List all installed packages
+
+  apt list --installed
+
+- List all available packages
+
+  apt list
+
+- List all available packages with version
+
+  apt list --all-versions
+
+### Arch Based Systems
+
+- Update the system
+
+  sudo pacman -Syu
+
+- Install a package
+
+  sudo pacman -S package_name
+
+- Remove a package
+
+  sudo pacman -R package_name
+
+- Search for a package
+
+  pacman -Ss package_name
+
+- List all installed packages
+
+  pacman -Q
+
+- List all available packages
+
+  pacman -Ss
+
+- Check the current date and time
+
+  date
+
+- Check the current user
+
+  whoami
+
+- Check the current user's home directory
+
+  echo $HOME
+
+- Check the current user's shell
+
+  echo $SHELL
+
+- Check the current user's path / executable paths of system
+
+  echo $PATH
+
+- Check the current user's environment variables
+
+  env
+
+- Check the current user's environment variables with values
+
+  env | grep -i "variable_name"
+
+- Check the current user's environment variables with values in a file
+
+  env > env.txt
+
+- Check the current user's environment variables with values in a file with root access
+
+  sudo env > env.txt
+
+- See the top 10 processes
+
+  top
+
+- See the top 10 processes with root access
+
+  sudo top
+
+- See the top 10 processes with root access and sorted by memory usage
+
+  sudo top -o %MEM
+
+- See the top 10 processes with root access and sorted by cpu usage
+
+  sudo top -o %CPU
+
+- See the top 10 processes with root access and sorted by cpu usage and memory usage
+
+  sudo top -o %CPU,%MEM
+
+- See the top 10 processes with root access and sorted by cpu usage and memory usage and show only the process id and the process name
+
+  sudo top -o %CPU,%MEM -p -c
+
+- See the current running processes
+
+  ps
+
+- See the current running processes in a tree format
+
+  pstree
+
+- Kill a specific process
+
+  killall ProcessName
+
+- See the system uptime
+
+  uptime
+
+- See the system uptime in a specific format
+
+  uptime -p
+
+- See the system monitor
+
+  htop
+
+- See the system monitor with root access and sorted by memory usage
+
+  sudo htop -o %MEM
+
+- See the system monitor with root access and sorted by cpu usage
+
+  sudo htop -o %CPU
+
+- See the system monitor with root access and sorted by cpu usage and memory usage
+
+  sudo htop -o %CPU,%MEM
+
+- See the system monitor with root access and sorted by cpu usage and memory usage and show only the process id and the process name
+
+  sudo htop -o %CPU,%MEM -p -c
+
+- See the system monitor with root access and sorted by cpu usage and memory usage and show only the process id and the process name and show the process tree
+
+  sudo htop -o %CPU,%MEM -p -c -t
 
 ## File / Directory Related Commands
 
@@ -237,3 +409,31 @@ A Beginners guide for Linux users
 - Create a file with content and open it using cat
 
   - echo "Hello World" > filename && cat filename
+
+- Create a .tar file
+
+  - tar -cvf filename.tar directory-name
+
+- Create a .tar.gz file
+
+  - tar -cvzf filename.tar.gz directory-name
+
+- Create a .zip file
+
+  - zip -r filename.zip directory-name
+
+- Extract a .tar file
+
+  - tar -xvf filename.tar
+
+- Extract a .tar.gz file
+
+  - tar -xvzf filename.tar.gz
+
+- Extract a .zip file
+
+  - unzip filename.zip
+
+- Find a file
+
+      - find . -name filename
