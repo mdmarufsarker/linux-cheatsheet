@@ -6,6 +6,8 @@ A Beginners guide for Linux users
 
 [System Related Commands](#system-related-commands)
 
+[Hardware Related Commands](#hardware-related-commands)
+
 [File / Directory Related Commands](#file--directory-related-commands)
 
 ## Bash Related Commands
@@ -116,6 +118,76 @@ A Beginners guide for Linux users
 
   pacman -Ss
 
+## More to come
+
+- Check the internet is working
+
+  ping google.com
+
+- Check System and Kernel version
+
+    uname -a
+
+- Check System version
+
+    cat /etc/os-release
+
+- Check Kernel
+
+    uname -r
+
+- Check hostname
+
+    hostname
+
+- Check IP address
+
+    ip addr
+
+- Check IP address (short)
+
+    ip a
+
+- Check IP address (long)
+
+    ip address
+
+- See user logged in
+
+    who
+
+- See username
+
+    whoami
+
+- Short information of logged in user
+
+    users
+
+- See all users
+
+    cat /etc/passwd
+
+- See all groups
+
+    cat /etc/group
+
+- See all groups of a user
+
+    groups username
+
+- See all users of a group
+
+    getent group groupname
+
+- Reboot the system
+
+    sudo reboot
+
+- Shutdown the system
+
+    sudo shutdown -h now / sudo poweroff / sudo halt / sudo init 0 / sudo systemctl poweroff
+
 - Check the current date and time
 
   date
@@ -219,6 +291,80 @@ A Beginners guide for Linux users
 - See the system monitor with root access and sorted by cpu usage and memory usage and show only the process id and the process name and show the process tree
 
   sudo htop -o %CPU,%MEM -p -c -t
+
+## Hardware Related Commands
+
+- See the system's hardware information
+
+  sudo lshw
+
+- See the system's hardware information in a specific format
+
+    sudo lshw -short
+
+- See the system's hardware information in a specific format and show only the network devices
+
+    sudo lshw -short -C network
+
+- See the system's hardware information in a specific format and show only the network devices and show the network devices in a tree format
+
+    sudo lshw -short -C network -class network -tree
+
+- Check the system's memory usage
+
+  free -h
+
+- Check CPU information
+
+  lscpu
+
+- Check Memory information
+
+  sudo dmidecode -t memory
+
+- Check Disk information
+
+  sudo dmidecode -t memory
+
+- Check USB information
+
+  lsusb
+
+- Check PCI information
+
+    lspci
+
+- Check Partitions
+
+    lsblk
+
+- Check Partitions with root access
+
+    sudo lsblk
+
+- Check Partitions with root access and show only the partitions
+
+    sudo lsblk -p
+
+- Check Partitions with root access and show only the partitions and show the partitions in a tree format
+
+    sudo lsblk -p -t
+
+- Mount a partition
+
+    sudo mount /dev/sda1 /mnt
+
+- Unmount a partition
+
+    sudo umount /dev/sda1
+
+- Mount a partition with root access and show only the partitions and show the partitions in a tree format
+
+    sudo lsblk -p -t
+
+- Read Write Mount a partition
+
+    sudo mount -o rw /dev/sda1 /mnt
 
 ## File / Directory Related Commands
 
@@ -436,4 +582,4 @@ A Beginners guide for Linux users
 
 - Find a file
 
-      - find . -name filename
+  - find . -name filename
