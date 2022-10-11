@@ -374,7 +374,7 @@ A Beginners guide for Linux users
 
 - Create multiple directories at a time
 
-    mkdir dir1 dir2 dir3 dir4 dir5
+      mkdir dir1 dir2 dir3 dir4 dir5
 
 - Create multiple files at a time
 
