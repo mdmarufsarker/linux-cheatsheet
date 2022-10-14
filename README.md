@@ -96,7 +96,7 @@ A Beginners guide for Linux users
 
 - Update the system
 
-      sudo pacman -Syu
+      sudo pacman -Syyu
 
 - Install a package
 
