@@ -59,21 +59,31 @@ A Beginners guide for Linux users
 - Update the system
 
       sudo apt update
+      # for some older packages
+      sudo apt-get update
 
 - Upgrade the system
 
       sudo apt upgrade
+      # for some older packages
+      sudo apt-get upgrade
 
 - Install a package
 
       sudo apt install package_name
+      # for some older packages
+      sudo apt-get install package_name
 
 - Remove a package
 
       sudo apt remove package_name
+      # for some older packages
+      sudo apt-get remove package_name
 
 - Remove a package and its dependencies
 
+      sudo apt autoremove package_name
+      # for some older packages
       sudo apt autoremove package_name
 
 - Search for a package
